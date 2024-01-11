@@ -83,7 +83,7 @@ const fetchHeadlines = async () => {
 const fetchGeneralNews = async () => {
   const response = await fetch(GENERAL_NEWS + API_KEY);
   newsDataArr = [];
-  if (response.status >= 200 && response.status < 300) {
+  if (response.status >= 200 ) {
     const myJson = await response.json();
     newsDataArr = myJson.articles;
   } else {
